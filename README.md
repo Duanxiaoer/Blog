@@ -6,4 +6,4 @@
 * 修改和发布博文需要登录，密码在CheckStatus.java中，可自行修改
 * 博文type和删除博文需自行写接口
 ---
-DEMO:[我的博客](duanwangye.xyz)
+DEMO:[我的博客](http://duanwangye.xyz/index.html)
