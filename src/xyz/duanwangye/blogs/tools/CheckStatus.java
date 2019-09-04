@@ -15,7 +15,7 @@ public class CheckStatus extends HttpServlet {
         String pwd = req.getParameter("password");
 
         System.out.println(pwd);
-        if (pwd.equals("2015141462038")){
+        if (pwd.equals("YOUR_PASSWORD")){
             HttpSession session = req.getSession();
             session.setAttribute("status","pass");
             resp.getWriter().print("<script>window.location = 'write.jsp'</script>");
