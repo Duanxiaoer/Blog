@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Single Post</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.ico" />
+
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+
+    <!-- Google Webfonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600|PT+Serif:400,400italic' rel='stylesheet' type='text/css'>
+
+    <!-- Styles -->
+   <link rel="stylesheet" href="css/style.css" id="theme-styles">
+
+    
+</head>
+<body>
+    <header>
+    <div class="widewrapper masthead">
+        <div class="container" style="width: 95%">
+            <a href="index.html" id="logo">
+                <img src="img/logo.png" alt="clean Blog">
+            </a>
+
+            <div id="mobile-nav-toggle" class="pull-right">
+                <a href="#" data-toggle="collapse" data-target=".clean-nav .navbar-collapse">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+
+            <nav class="pull-right clean-nav" style="float:right;">
+                <div class="collapse navbar-collapse">
+                    <ul class="nav nav-pills navbar-nav">
+
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="checkStatus.jsp">Write</a>
+                        </li>
+                        <li>
+                            <a id="modify" href="#">Modify</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+    </div>
+
+    <div class="widewrapper subheader">
+        <div class="container" style="width: 95%">
+            <div>
+                <div class="clean-breadcrumb">
+                    <a href="#">博客</a>
+                </div>
+            </div>
+
+            <div class="clean-searchbox">
+                <form action="#" method="get" accept-charset="utf-8">
+                    <input class="searchfield" id="searchbox" type="text" placeholder="Search">
+                    <button class="searchbutton" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div class="widewrapper main">
+        <div class="container" style="width: 95%">
+            <div class="row">
+                <div class="col-md-8 blog-main">
+
+                    <article class="blog-post" id="blog">
+                    </article>
+
+                    <aside class="social-icons clearfix">
+                        <h3>Share on </h3> 
+                        <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-google"></i></a>
+                    </aside>
+                </div>
+                <aside class="col-md-4 blog-aside">
+
+                    <aside class="comments">
+                        <hr>
+
+                        <h2 id="comments_number"><i class="fa fa-comments"></i> 6 Comments</h2>
+                        <div id="comments">
+                            <article class="comment">
+                                <header class="clearfix">
+                                    <img src="img/avatar.png" alt="A Smart Guy" class="avatar">
+                                    <div class="meta">
+                                        <h3><a href="#">John Doe</a></h3>
+                                        <span class="date">
+                                        24 August 2015
+                                    </span>
+                                        <span class="separator">
+                                        -
+                                    </span>
+
+                                        <a href="#create-comment" class="reply-link">Reply</a>
+                                    </div>
+                                </header>
+                                <div class="body">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere sit perspiciatis debitis, vel ducimus praesentium expedita, assumenda ipsum cum corrupti dolorum modi. Rem ipsam similique sapiente obcaecati tenetur beatae voluptatibus.
+                                </div>
+                            </article>
+                        </div>
+                    </aside>
+
+                    <aside class="create-comment" id="create-comment">
+                        <hr>
+
+                        <h2><i class="fa fa-pencil"></i> Add Comment</h2>
+
+                        <form action="#" onsubmit="return false" method="post" accept-charset="utf-8">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" name="name" id="comment-name" placeholder="Your Name" class="form-control input-lg">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" readonly name="email" id="comment-email" placeholder="Email (暂时不需要)" class="form-control input-lg">
+                                </div>
+                            </div>
+                            <textarea rows="10" name="message" id="comment-body" placeholder="Your Message" class="form-control input-lg"></textarea>
+                            <div class="buttons clearfix">
+                                <button  onclick="submit_comment()" class="btn btn-xlarge btn-clean-one">Submit</button>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input class="form-control input-lg" type="text" placeholder="判断下 :)">
+                                </div>
+                                <div class="col-md-4">
+                                    <input  class="form-control input-lg " type="radio" name="tell" id="robot" checked value="girlfriend" >robot
+                                </div>
+                                <div class="col-md-4">
+                                    <input class="form-control input-lg " type="radio" name="tell" id="human" value="refresh">not me
+                                </div>
+                            </div>
+                        </form>
+                    </aside>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="widewrapper footer">
+            <div class="container"  style="width: 95%">
+                <div class="row">
+                    <div class="col-md-6 footer-widget">
+                        <h3> <i class="fa fa-user"></i>About</h3>
+
+                        <p>博主为新晋码农，了解Android、web开发，略懂Java、C++，了解Linux系统维护，开发并维护几个网站以及日常维护自己的服务器</p>
+                        <p>PS：本人有E5-2630 V3(6核12线程) 64GB内存 2080tiX2 服务器可出租算力，欢迎有需要的朋友联系</p>
+                    </div>
+
+                    <div class="col-md-6 footer-widget">
+                        <h3> <i class="fa fa-envelope"></i>Contact Me</h3>
+
+                        <style>
+                            *{padding: 0; margin: 0}
+                            .wb-box{
+                                position: fixed;
+                                width: 100%;
+                                height: 100%;
+                                display: none;
+                            }
+                            .wb-box1{
+                                width:258px;
+                                height:258px;
+                                position:fixed;
+                                left:50%;
+                                top:25%;
+                                margin-left:-129px;
+                                border:1px solid #000000;
+                            }
+                            .wb-box-text1{
+                                width:258px;
+                                position:fixed;
+                                left:50%;
+                                top:25%;
+                                margin-top:258px;
+                                margin-left:-129px;
+                                text-align:center;
+                                color:#000;
+                            }
+                            .wb-box-text2{
+                                width:auto;
+                                height:auto;
+                                position:fixed;
+                                left:50%;
+                                top:25%;
+                                margin-left:95px;
+                                text-align:left;
+                                font-size:25px;
+                                line-height:100%;
+                                padding-top:0;
+                            }
+                        </style>
+
+                        <div class="wb-box" hidden>
+                            <div class="wb-box1">
+                                <img src="img/qq.png" width="256" height="256" />
+                            </div>
+                            <div class="wb-box-text1">
+                                <a  style="font-size:20px; font-weight:bold; color:#000000;">扫二维码联系我</a>
+                            </div>
+                            <div class="wb-box-text2">
+                                <a href="javascript:" onclick="jQuery('.wb-box').hide()" style="border: black;font-size: medium">关闭</a>
+                            </div>
+                        </div>
+
+                        <p>你可以通过想我发邮件联系我，当然也可以通过QQ添加我为好友。同时你也可以在GitHub上关注我。</p>
+                        <p>邮件：745298691（At）qq.com</p>
+                        <div class="footer-widget-icon"><i class="fa fa-qq" onclick="jQuery('.wb-box').show()"></i><i class="fa fa-github" onclick="window.open('https://github.com/Duanxiaoer')"></i></div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="widewrapper copyright">
+            Copyright 2015
+        </div>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/marked.min.js"></script>
+    <script src="js/modernizr.js"></script>
+
+</body>
+
+<script>
+    //parse the query params
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    var title,id;//传递的参数
+    for (var i=0;i<vars.length;i++) {
+        var pair = vars[i].split("=");
+        if(pair[0] === "title"){
+            title =  decodeURI(pair[1]);
+        }
+        if(pair[0] === "id"){
+            id =  pair[1];
+        }
+    }
+
+    //modify
+    document.getElementById("modify").href =  "write.jsp?id="+id;
+
+    function get_blog(){
+
+        $.ajax({
+            url:"/DispatcherControl",
+            type:"POST",
+            data:{title:title,id:id},
+            success(data){
+                //show the blog
+                document.getElementById("blog").innerHTML = marked(data);
+            }
+        })
+    }
+
+
+    var reply_to_id = "";
+    var reply_to_name = "";
+    function set_reply_comment_params(comment_id,comment_author) {
+        reply_to_id = comment_id;
+        reply_to_name = comment_author;
+        window.location.href = "#create-comment";
+    }
+
+    function submit_comment() {
+
+        var tell = document.getElementsByName("tell");
+        var which_operation = "";
+
+        for (var i = 0; i < tell.length; i++) { //遍历Radio
+            if (tell[i].checked) {
+                which_operation = tell[i].value;
+            }
+        }
+
+
+        if (which_operation === "refresh"){
+            var comment_name = document.getElementById("comment-name").value;
+            // var comment_email = document.getElementById("comment-email").value;
+            var comment_body = document.getElementById("comment-body").value;
+
+            $.ajax({
+                url:"/DatabaseControl",
+                type:"POST",
+                dataType:"JSON",
+                data:{id:id,reply_to_id:reply_to_id,reply_to_name:reply_to_name,comment_body:comment_body,comment_name:comment_name},
+                success(data){
+                    show_comment(data);
+                    document.getElementById("comment-body").value = "";
+                    alert("评论成功 :) ")
+                }
+            })
+        }else {
+            window.location = "https://www.baidu.com/s?wd=%E5%A6%82%E4%BD%95%E6%89%BE%E5%A5%B3%E6%9C%8B%E5%8F%8B&rsv_spt=1&rsv_iqid=0xd17a0a06002f47d1&issp=1&f=8&rsv_bp=1&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_dl=tb&rsv_sug3=23&rsv_sug1=20&rsv_sug7=101&rsv_t=0d19Wn5db1%2F8OgIZxFJQd7dhXKy3A6muqE5WDWxRL1j7ZV1hs4zeI5vFy5HEZrKoxl7u&rsv_sug2=0&inputT=8418&rsv_sug4=10781"
+        }
+    }
+
+
+    function show_comment(data) {
+
+        var comments = data.comments;
+
+        var comments_html = "";
+
+        var comments_count = 0;
+
+        //显示评论
+        for (var comment_position in comments){
+            //评论数
+            comments_count += 1;
+
+            //恢复的缩进样式
+            var  reply = "";
+            //回复谁
+            var  reply_to_name = "";
+            //是否是回复
+            if (comments[comment_position].reply !== comments[comment_position].id){
+                reply = "reply";
+                reply_to_name = '<span style="color: #2a6496;margin-right: 5px">@'+comments[comment_position].reply_to_name+'</span>'
+            }
+
+            comments_html += '' +
+                '<article class="comment '+reply+'">\n' +
+                '                                <header class="clearfix">\n' +
+                '                                    <img src="img/avatar.png" alt="A Smart Guy" class="avatar">\n' +
+                '                                    <div class="meta" onclick="set_reply_comment_params(\''+comments[comment_position].id+'\',\''+comments[comment_position].author+'\')" >\n' +
+                '                                        <h3><a href="#">'+comments[comment_position].author+'</a></h3>\n' +
+                '                                        <span class="date">\n' +
+                '                                        '+comments[comment_position].time+'\n' +
+                '                                    </span>\n' +
+                '                                        <span class="separator">\n' +
+                '                                        -\n' +
+                '                                    </span>\n' +
+                '\n' +
+                '                                        <a href="#creat-comment" class="reply-link">Reply</a>\n' +
+                '                                    </div>\n' +
+                '                                </header>\n' +
+                '                                <div class="body">\n' +
+                '                                    '+reply_to_name+comments[comment_position].content+'\n' +
+                '                                </div>\n' +
+                '                            </article>\n' +
+                '';
+
+        }
+
+        //评论数
+        document.getElementById("comments_number").innerHTML = '<i class="fa fa-comments"></i> '+ comments_count + " Comments";
+        //评论
+        document.getElementById("comments").innerHTML = comments_html;
+    }
+
+
+
+    function get_comments(){
+        $.ajax({
+            url:"/DatabaseControl",
+            type:"POST",
+            dataType:"JSON",
+            data:{id:id},
+            success(data){
+                show_comment(data);
+            }
+        })
+    }
+
+    get_blog();
+    get_comments();
+
+
+
+</script>
+</html>
